@@ -62,7 +62,7 @@ export class Limiter extends q {
     });
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    this.addEventListener('timeout', this.handleJobTimeout as any);
+    // this.addEventListener('timeout', this.handleJobTimeout as any);
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     this.addEventListener('success', this.handleSuccess as any);

@@ -35,7 +35,7 @@ import unzip from 'extract-zip';
     'https://api.github.com/repos/gorhill/uBlock/releases/latest',
   );
   const json = await data.json();
-
+  console.log(json.assets);
   await downloadUrlToDirectory(json.assets[0].browser_download_url, zipFile);
   await unzip(zipFile, { dir: os.tmpdir() });
   await moveFile(join(tmpUblockPath), join(extensionsDir, 'ublock'));
